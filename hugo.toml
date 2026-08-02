@@ -1,0 +1,28 @@
+baseURL = "https://still-running-siebel.github.io/"
+languageCode = "en-us"
+title = "Still Running Siebel"
+
+[params]
+  tagline = "Tools and expertise for teams still running Siebel."
+  description = "Utilities, migration toolkits, and hands-on help for Siebel CRM administrators - built by someone who still does this every day."
+
+[menus]
+  [[menus.main]]
+    name = "Articles"
+    pageRef = "/articles"
+    weight = 10
+  [[menus.main]]
+    name = "Tools"
+    pageRef = "/tools"
+    weight = 20
+  [[menus.main]]
+    name = "Consulting"
+    pageRef = "/consulting"
+    weight = 30
+  [[menus.main]]
+    name = "About"
+    pageRef = "/about"
+    weight = 40
+
+[markup.goldmark.renderer]
+  unsafe = true

@@ -1,0 +1,44 @@
+{{ define "main" }}
+<section class="hero">
+  <p class="logline eyebrow">ObjMgrLog&nbsp;&nbsp;Info&nbsp;&nbsp;::&nbsp;&nbsp;SESSION OPEN</p>
+  <h1>Still running Siebel?<br>So are we.</h1>
+  <p class="lede">{{ site.Params.description }}</p>
+  <p class="hero-actions">
+    <a class="btn" href="/tools/">Browse the tools</a>
+    <a class="btn btn-quiet" href="/consulting/">Get help</a>
+  </p>
+</section>
+
+<section class="home-section">
+  <p class="logline eyebrow">ObjMgrLog&nbsp;&nbsp;Info&nbsp;&nbsp;::&nbsp;&nbsp;ARTICLES</p>
+  <h2>Latest articles</h2>
+  {{ $articles := where site.RegularPages "Section" "articles" }}
+  {{ if $articles }}
+  <ul class="post-list">
+    {{ range first 5 $articles.ByDate.Reverse }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+    </li>
+    {{ end }}
+  </ul>
+  {{ else }}
+  <p class="empty">First articles landing shortly.</p>
+  {{ end }}
+</section>
+
+<section class="home-section">
+  <p class="logline eyebrow">ObjMgrLog&nbsp;&nbsp;Info&nbsp;&nbsp;::&nbsp;&nbsp;TOOLS</p>
+  <h2>Tools</h2>
+  {{ $tools := where site.RegularPages "Section" "tools" }}
+  {{ if $tools }}
+  <ul class="post-list">
+    {{ range $tools }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Params.price }}<span class="post-date">{{ . }}</span>{{ end }}</li>
+    {{ end }}
+  </ul>
+  {{ else }}
+  <p class="empty">The first utility - a Siebel service manager for Windows - is in the workshop.</p>
+  {{ end }}
+</section>
+{{ end }}
