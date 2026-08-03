@@ -1,10 +1,11 @@
-baseURL = "https://still-running-siebel.github.io/"
+baseURL = "https://stillrunningsiebel.com/"
 languageCode = "en-us"
 title = "Still Running Siebel"
 
 [params]
   tagline = "Tools and expertise for teams still running Siebel."
   description = "Utilities, migration toolkits, and hands-on help for Siebel CRM administrators - built by someone who still does this every day."
+  cloudflareAnalyticsToken = "3d02e22bd51049d88bb2a791d468f50a"
 
 [menus]
   [[menus.main]]

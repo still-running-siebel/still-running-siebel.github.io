@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   {{ $css := resources.Get "css/main.css" | minify }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  {{ with site.Params.cloudflareAnalyticsToken }}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ . }}"}'></script>{{ end }}
 </head>
 <body>
   <header class="site-header">
