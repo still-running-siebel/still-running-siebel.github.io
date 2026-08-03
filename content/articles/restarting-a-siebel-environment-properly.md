@@ -1,6 +1,6 @@
 ---
 title: "Restarting a Siebel environment properly: order, waits, and the things that hang"
-date: 2026-08-04
+date: 2026-08-03
 ---
 
 Restarting Siebel is one of those tasks that looks trivial until it isn't.
